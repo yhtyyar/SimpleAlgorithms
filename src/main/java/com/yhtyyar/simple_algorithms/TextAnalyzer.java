@@ -4,34 +4,25 @@ import java.util.*;
 
 public class TextAnalyzer {
 
-    static  String text;
+    static  String text1 = "[({})]";
+    static  String text2 = "[(){}";
 
-     static void textInput(){
+     public static void main(String [] args) {
 
-        final Scanner input = new Scanner(System.in);
+     }
 
-        System.out.println("Введите текст: ");
-        text = input.nextLine();
 
-        isValid(text);
-
-        if (isValid(text) == true) {
-            System.out.println(" Всё правильно! ");
-        } else {
-            System.out.println("Закройте не закрытые скобки!");
-        }
-    }
 
     private static boolean isValid (String string) {
 
-        HashMap<Character, Character> closeBracket = new HashMap <>();
+        Map <Character, Character> closeBracket = new HashMap <>();
         closeBracket.put('}', '{');  // ключь и значение
         closeBracket.put(')', '(');
         closeBracket.put(']', '[');
 
 
-        HashSet<Character> openBracket = new HashSet <>(closeBracket.values()); // передаем значения
-        ArrayDeque<Character> arrayDeque = new ArrayDeque <>();
+        HashSet <Character> openBracket = new HashSet <>(closeBracket.values()); // передаем значения
+        ArrayDeque <Character> arrayDeque = new ArrayDeque <>();
 
         char[] chars = string.toCharArray();
 
@@ -54,5 +45,6 @@ public class TextAnalyzer {
         }
 
         return arrayDeque.isEmpty(); // возвращает true если пустая строка, если нет то false
+
     }
 }

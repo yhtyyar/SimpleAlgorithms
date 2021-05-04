@@ -1,49 +1,43 @@
 package main.java.com.yhtyyar.simple_algorithms;
 
+import com.sun.corba.se.spi.activation.BadServerDefinition;
+
 import java.util.*;
 
 public class SortingCollections {
 
-    private static int [] firstArray = new int[7];
-    private static int[] secondArray = new int[7];
 
-    static void sortingCollections() {
+    static int firstCollection [] = new int[] {6,4,6,8,1,100,-100};
+    static int secondCollection [] = new int[] {3,8,76544, -42, 100,1};
 
-        final Scanner input = new Scanner(System.in);
+    public static void main(String [] args) {
 
-        System.out.println("Введите первый набор чисел: ");
-        for (int i = 0; i < firstArray.length; i++) {
-            firstArray [i] = input.nextInt();
-        }
+        sortingCollections();
 
-        System.out.println();
-        System.out.println("Введите второй набор чисел ");
-        for (int i = 0; i < secondArray.length; i++) {
-            secondArray [i] = input.nextInt();
-        }
 
-        System.out.println("Отсортированные положительные и совподающие числа");
-        for (int i = 0; i < firstArray.length; i++) {
-            if (firstArray[i] > 0) {
-                int first = firstArray[i];
-                Arrays.sort(firstArray);   //сортировка массива
+    }
 
-                for (int j = 0; j < secondArray.length; j++) {
-                    if (secondArray[j] > 0) {
-                        int second = secondArray[j];
+    private static void sortingCollections (){
 
-                        if (first == second){
-                            System.out.print(firstArray [i] + " ");
+        for (int i = 0; i < firstCollection.length; i++) {
+            if (firstCollection[i] > 0) {
+                int first = firstCollection[i];
+                Arrays.sort(firstCollection);   //сортировка массива
+                for (int j = 0; j < secondCollection.length; j++) {
+                    if (secondCollection[j] > 0) {
+                        int second = secondCollection[j];
+                        if (first == second) {
+                            System.out.print(first + " ");
                         } else {
                             System.out.print("");
                         }
-                    } else if (secondArray[j] <= 0){
+                    } else if (secondCollection[j] <= 0) {
                         System.out.print("");
                     }
                 }
-            } else if (firstArray[i] <= 0) {
+            } else if (firstCollection[i] <= 0) {
                 System.out.print("");
-            }
+            } ;
         }
 
     }
