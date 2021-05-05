@@ -13,7 +13,7 @@ public class SortingCollections2 {
 
     private static void sortingCollections() {
 
-        SortedMap <Integer, Integer> treeMap = new TreeMap<>();
+        TreeMap <Integer, Integer> treeMap = new TreeMap<>();
 
         treeMap.put(6, 3);
         treeMap.put(4, 8);
@@ -27,7 +27,7 @@ public class SortingCollections2 {
         treeMap.put(100, 6);
 
 
-        TreeSet<Integer> treeSet = new TreeSet<Integer>(treeMap.values());
+        TreeSet <Integer> treeSet = new TreeSet<>(treeMap.values());
 
         for (Map.Entry i : treeMap.entrySet() ){
             if (treeSet.tailSet(1).contains(i.getKey())) {
