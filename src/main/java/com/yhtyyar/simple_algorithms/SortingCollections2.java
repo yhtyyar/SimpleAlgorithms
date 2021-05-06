@@ -35,8 +35,6 @@ public class SortingCollections2 {
         for (Map.Entry i : hashMap.entrySet() ){
             if (treeSet.tailSet(1).contains(i.getKey())) {
                 linkedList.add(i.getKey());
-            } else {
-                System.out.print("");
             }
         }
         System.out.println(linkedList);
