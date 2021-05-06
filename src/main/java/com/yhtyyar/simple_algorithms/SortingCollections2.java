@@ -9,6 +9,7 @@ public class SortingCollections2 {
 
 
         sortingCollections();
+
     }
 
     private static void sortingCollections() {
@@ -29,13 +30,16 @@ public class SortingCollections2 {
 
         TreeSet <Integer> treeSet = new TreeSet<>(hashMap.values());
 
+        LinkedList linkedList = new LinkedList();
+
         for (Map.Entry i : hashMap.entrySet() ){
             if (treeSet.tailSet(1).contains(i.getKey())) {
-                System.out.print(i.getKey() + " ");
+                linkedList.add(i.getKey() + " ");
             } else {
                 System.out.print("");
             }
         }
+        System.out.println(linkedList);
     }
 
 }
