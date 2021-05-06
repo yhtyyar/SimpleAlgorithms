@@ -13,23 +13,23 @@ public class SortingCollections2 {
 
     private static void sortingCollections() {
 
-        TreeMap <Integer, Integer> treeMap = new TreeMap<>();
+        HashMap <Integer, Integer> hashMap = new HashMap<>();
 
-        treeMap.put(6, 3);
-        treeMap.put(4, 8);
-        treeMap.put(5, 76544);
-        treeMap.put(8, -42);
-        treeMap.put(1, -100);
-        treeMap.put(200, 26);
-        treeMap.put(26, 4);
-        treeMap.put(3, 5);
-        treeMap.put(-100, 1);
-        treeMap.put(100, 6);
+        hashMap.put(6, 3);
+        hashMap.put(4, 8);
+        hashMap.put(5, 76544);
+        hashMap.put(8, -42);
+        hashMap.put(1, -100);
+        hashMap.put(200, 26);
+        hashMap.put(26, 4);
+        hashMap.put(3, 5);
+        hashMap.put(-100, 1);
+        hashMap.put(100, 6);
 
 
-        TreeSet <Integer> treeSet = new TreeSet<>(treeMap.values());
+        TreeSet <Integer> treeSet = new TreeSet<>(hashMap.values());
 
-        for (Map.Entry i : treeMap.entrySet() ){
+        for (Map.Entry i : hashMap.entrySet() ){
             if (treeSet.tailSet(1).contains(i.getKey())) {
                 System.out.print(i.getKey() + " ");
             } else {
