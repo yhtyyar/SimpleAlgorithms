@@ -16,7 +16,7 @@ public class SortingCollections2 {
 
     private static void sortingCollections(int [] key, int [] value) {
 
-        HashMap <Integer, Integer> hashMap = new HashMap<>();
+        Map <Integer, Integer> hashMap = new HashMap<>();
 
         for (int i = 0; i < key.length; i++) {
             hashMap.put(key[i], value[i]);
