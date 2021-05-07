@@ -4,29 +4,23 @@ import java.util.*;
 
 public class SortingCollections2 {
 
+    static int [] key = {6,4,5,8,1,200,26,3,-100,100};
+    static int [] value = {3,8,76544,-42,-100,26,4,5,1,6,};
 
     public static void main(String[] args) {
 
 
-        sortingCollections();
+        sortingCollections(key,value);
 
     }
 
-    private static void sortingCollections() {
+    private static void sortingCollections(int [] key, int [] value) {
 
         HashMap <Integer, Integer> hashMap = new HashMap<>();
 
-        hashMap.put(6, 3);
-        hashMap.put(4, 8);
-        hashMap.put(5, 76544);
-        hashMap.put(8, -42);
-        hashMap.put(1, -100);
-        hashMap.put(200, 26);
-        hashMap.put(26, 4);
-        hashMap.put(3, 5);
-        hashMap.put(-100, 1);
-        hashMap.put(100, 6);
-
+        for (int i = 0; i < key.length; i++) {
+            hashMap.put(key[i], value[i]);
+        }
 
         TreeSet <Integer> treeSet = new TreeSet<>(hashMap.values());
 
