@@ -36,62 +36,11 @@ public class SortingCollections2 {
                 if ( firstCollection.get(i) > 0) {
                     result.add(firstCollection.get(i));
 
-
                 }
             }
         }
 
         return   result;
     }
-
-
-
-
-
-//        Integer [] first = new Integer [firstCollection.size()];
-//        first = firstCollection.toArray(first);
-//
-//
-//        Map<Integer,Integer> hashMap = new HashMap<>();
-//
-//        for (int i = 0; i < first.length; i++) {
-//            hashMap.put(first[i],second[i]);
-//        }
-//
-//        TreeSet <Integer> treeSet = new TreeSet <>(hashMap.values());
-//
-//
-//
-//        for (Map.Entry i : hashMap.entrySet() ){
-//            if (treeSet.tailSet(0).contains(i.getKey())) {
-//
-//
-//            }
-//        }
-
-
-
-
-
-//    private static void sortingCollections1(int [] key, int [] value) {
-//
-//        Map <Integer, Integer> hashMap = new HashMap<>();
-//
-//        for (int i = 0; i < key.length; i++) {
-//            hashMap.put(key[i], value[i]);
-//        }
-//
-//        TreeSet <Integer> treeSet = new TreeSet<>(hashMap.values());
-//
-//        LinkedList linkedList = new LinkedList();
-//
-//        for (Map.Entry i : hashMap.entrySet() ){
-//            if (treeSet.tailSet(1).contains(i.getKey())) {
-//                linkedList.add(i.getKey());
-//                treeSet = new TreeSet <Integer>((Collection<? extends Integer>) i.getKey());
-//            }
-//        }
-//        System.out.println(treeSet);
-//    }
 
 }
