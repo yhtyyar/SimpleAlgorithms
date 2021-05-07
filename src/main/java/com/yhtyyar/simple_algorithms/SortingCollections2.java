@@ -20,25 +20,19 @@ public class SortingCollections2 {
                                                     List<Integer> secondCollection) {
 
 
-        Map <Integer, Integer> hashMap = new HashMap<>();
-
-        for (int i = 0; i < firstCollection.size(); i++) {
-            hashMap.put(firstCollection.get(i), secondCollection.get(i));
-        }
-
         TreeSet <Integer> treeSet = new TreeSet<>();
-
-        List <Integer> result =  new ArrayList<>(treeSet);
-
 
         for (int i = 0; i < firstCollection.size(); i++) {
             if(secondCollection.contains(firstCollection.get(i))){
                 if ( firstCollection.get(i) > 0) {
-                    result.add(firstCollection.get(i));
+                    treeSet.add(firstCollection.get(i));
 
                 }
             }
         }
+
+        List <Integer> result =  new ArrayList<>(treeSet);
+
 
         return   result;
     }
