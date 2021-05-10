@@ -24,10 +24,7 @@ public class SortingCollections2 {
 
         for (int i = 0; i < firstCollection.size(); i++) {
             if(secondCollection.contains(firstCollection.get(i))){
-                if ( firstCollection.get(i) > 0) {
                     treeSet.add(firstCollection.get(i));
-
-                }
             }
         }
 
